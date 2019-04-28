@@ -40,6 +40,7 @@ var askLiri = function () {
       // Append movieData and the divider to log.txt, print movieData to the console
       fs.appendFile("log.txt", movieData + divider, function (err) {
         if (err) throw err;
+        console.log("\n----- log.txt was updated with Movie info! -----\n")
         console.log(movieData);
       });
     });
@@ -62,6 +63,7 @@ var askLiri = function () {
       ].join("\n\n");
       fs.appendFile("log.txt", concertData + divider, function (err) {
         if (err) throw err;
+        console.log("\n----- log.txt was updated with Concert info! -----\n")
         console.log(concertData);
       });
     });
@@ -89,6 +91,7 @@ var askLiri = function () {
   //       //   Append songData and the divider to log.txt, print songData to the console
   //       fs.appendFile("log.txt", songData + divider, function (err) {
   //         if (err) throw err;
+            //  console.log("\n----- log.txt was updated with Song info! -----\n")
   //         console.log(songData);
   //       });
   //     };

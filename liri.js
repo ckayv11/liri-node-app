@@ -1,7 +1,7 @@
 require("dotenv").config();
 var keys = require("./keys.js");
-// var spotify = new Spotify(keys.spotify);
 var fs = require('fs');
+// var spotify = new Spotify(keys.spotify);
 
 var event = new keys();
 
@@ -37,7 +37,8 @@ function doWhatItSays () {
         if (err) {
         return console.log(err);
         };
-        event.findMovie(data);
+        console.log(data);
+        // event.findMovie(data);
     });
 };
 // Print whatever is in do-what-it-says
