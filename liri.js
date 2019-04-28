@@ -18,3 +18,8 @@ if (search === "movie-this"){
     event.findMovie(term);
 }
 
+// Print searching for a concert & print the term as well
+if (search === "concert-this") {
+    console.log("Searching for Concert");
+    event.findConcert(term);
+}
