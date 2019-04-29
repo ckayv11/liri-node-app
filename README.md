@@ -7,10 +7,10 @@ Liri is like iPhone's Siri. However, while Siri is a Speech Interpretation and R
 ## How does Liri work? ##
 
 To retrieve data to power the app, I send requests using the following Node packages:
-* Axios (used to grab data from OMDB API & Bands in Town API)
-* Node-Spotify-API
-* Moment
-* DotEnv
+* Axios (used to grab data from OMDB API & Bands in Town API): https://www.npmjs.com/package/axios
+* Node-Spotify-API: https://www.npmjs.com/package/node-spotify-api
+* Moment: https://www.npmjs.com/package/moment
+* DotEnv: https://www.npmjs.com/package/dotenv
 
 **These all need to be installed using `npi install <package name>` in order for the app to work.**
 
@@ -30,6 +30,22 @@ Additionally, using appendFile, the data will be logged to a log.txt file.
         - Venue location
         - Date of the Event (used moment to format this as "MM/DD/YYYY")
 
+Step 1: npm install axios
+
+![1. npm install axios](images/npm-install-axios.png)
+
+Axios successfully installed!
+
+![axios successfully installed](images/axios-installed.png)
+
+Step 2: Enter concert-this command as listed above + the artist/band name
+
+![2. Enter concert-this command](images/concert-this-command.png)
+
+Concert data rendered
+
+![Concert data rendered](images/concert-this-results.png)
+
 
 2. `node liri.js movie-this <movie name here>`
     * Using the axios package, this will search the OMDB API for a movie and output the following info about each movie to the terminal/bash window:
@@ -42,13 +58,21 @@ Additionally, using appendFile, the data will be logged to a log.txt file.
         - Plot of the movie.
         - Actors in the movie.
 
+Step 1: npm install axios
+
 ![1. npm install axios](images/npm-install-axios.png)
+
+Axios successfully installed!
 
 ![axios successfully installed](images/axios-installed.png)
 
-![2. Enter movie-this command](/images/movie-this-command.png)
+Step 2: Enter movie-this command as listed above + the movie name
 
-![Movie data rendered](/images/movie-this-results.png)
+![2. Enter movie-this command](images/movie-this-command.png)
+
+Movie data rendered
+
+![Movie data rendered](images/movie-this-results.png)
 
 
 3. `node liri.js spotify-this-song <song name here>`
@@ -58,8 +82,12 @@ Additionally, using appendFile, the data will be logged to a log.txt file.
         - A preview link of the song from Spotify
         - The album that the song is from
 
-4. **node liri.js do-what-it-says**
+4. `node liri.js do-what-it-says`
     * Using the fs Node package, Liri will take the text inside of random.txt and then use it to call one of Liri's commands.
+
+The data is also logged to a log.txt file.
+
+![log.txt image](images/log-txt-screen.png)
 
 
 ### Thanks for visiting and enjoy the app! ###
