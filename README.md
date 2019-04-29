@@ -104,7 +104,7 @@ Song data rendered
     * Using the fs Node package, Liri will take the text inside of random.txt and then use it to call one of Liri's commands.
     * Be sure all the node packages are installed (if installed already, won't have to do it again)
 
-Enter do-what-it-says command & enter; data from random-txt will render
+Enter do-what-it-says command & enter; data from random.txt will render
 
 ![random-txt image](images/random-text-song.png)
 
