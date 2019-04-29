@@ -14,6 +14,8 @@ To retrieve data to power the app, I send requests using the following Node pack
 
 **These all need to be installed using `npi install <package name>` in order for the app to work.**
 
+In this app, Liri will search Spotify for songs, Bands in Town for concerts, and OMDB for movies.
+
 Liri can take in one of the following commands and log the data to your terminal/bash window:
 * concert-this
 * movie-this
