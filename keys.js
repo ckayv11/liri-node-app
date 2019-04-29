@@ -8,8 +8,8 @@ exports.spotify = {
 var axios = require('axios');
 var fs = require('fs');
 var moment = require('moment');
-// var spotify = new Spotify(keys.spotify);
-// var Spotify = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
+var keys = require("./keys.js");
 
 
 var askLiri = function () {
@@ -70,33 +70,35 @@ var askLiri = function () {
   };
 
   //findSong takes in the name of a song and searches Spotify API
-  // this.findSong = function (song) {
-  //   // If there is no song name, set the song to Ace of Base "The Sign"
-  //   if (!song) {
-  //     song = "The Sign";
-  //   }
-  //   spotify.search({ type: 'track', query: song }, function (err, data) {
-  //     if (err) {
-  //       console.log('Error occurred: ' + err);
-  //       return;
-  //     } else {
-  //       var trackData = data.tracks.items[0];
-  //       var songData = [
-  //         "Artist(s): " + trackData.album.artists[0].name,
-  //         "Song Name: " + song,
-  //         "Song Preview: " + trackData.album.external_urls.spotify,
-  //         "Album: " + trackData.album.name,
-  //       ].join("\n\n");
+  this.findSong = function (song) {
+    // If there is no song name, set the song to Ace of Base "The Sign"
+    if (!song) {
+      console.log("Need a song? Check out this throwback!")
+      song = "The Sign (Ace of Base)";
+    }
+    var spotify = new Spotify(keys.spotify);
+    spotify.search({ type: 'track', query: song }, function (err, data) {
+      if (err) {
+        console.log('Error occurred: ' + err);
+        return;
+      } else {
+        var trackData = data.tracks.items[0];
+        var songData = [
+          "Artist(s): " + trackData.album.artists[0].name,
+          "Song Name: " + song,
+          "Song Preview: " + trackData.album.external_urls.spotify,
+          "Album: " + trackData.album.name,
+        ].join("\n\n");
 
-  //       //   Append songData and the divider to log.txt, print songData to the console
-  //       fs.appendFile("log.txt", songData + divider, function (err) {
-  //         if (err) throw err;
-            //  console.log("\n----- log.txt was updated with Song info! -----\n")
-  //         console.log(songData);
-  //       });
-  //     };
-  //   });
-  // };
+        //   Append songData and the divider to log.txt, print songData to the console
+        fs.appendFile("log.txt", songData + divider, function (err) {
+          if (err) throw err;
+             console.log("\n----- log.txt was updated with Song info! -----\n")
+          console.log(songData);
+        });
+      };
+    });
+  };
 
 };
-  module.exports = askLiri;
+  module.exports = askLiri; //module.exports with askLiri function as an object with data/variables to access in liri.js file using the 'require' keyword.

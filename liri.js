@@ -1,8 +1,7 @@
+// Using the require keyword lets us access all of the exports in our .env, key.js, fs files
 require("dotenv").config();
 var keys = require("./keys.js");
-var fs = require('fs');
-// var spotify = new Spotify(keys.spotify);
-
+// var fs = require('fs');
 var event = new keys();
 
 // Grab search command line argument
@@ -30,20 +29,20 @@ if (search === "spotify-this-song"){
 
 
 //doWhatItSays function where LIRI takes the text inside of random.txt and then use it to call one of LIRI's commands.
-function doWhatItSays () {
-    //Reads the random.txt file and calls Spotify function
-    fs.readFile("random.txt", "utf8", function(err, data) {
-        // If the code experiences any errors it will log the error to the console.
-        if (err) {
-        return console.log(err);
-        };
-        console.log(data);
-        // event.findMovie(data);
-    });
-};
-// Print whatever is in do-what-it-says
-if (search === "do-what-it-says"){
-console.log("Searching...");
-doWhatItSays();
-};
+// function doWhatItSays () {
+//     //Reads the random.txt file and calls Spotify function
+//     fs.readFile("random.txt", "utf8", function(err, data) {
+//         // If the code experiences any errors it will log the error to the console.
+//         if (err) {
+//         return console.log(err);
+//         };
+//         console.log(data);
+//         // event.findMovie(data);
+//     });
+// };
+// // Print whatever is in do-what-it-says
+// if (search === "do-what-it-says"){
+// console.log("Searching...");
+// doWhatItSays();
+// };
 
