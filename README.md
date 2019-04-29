@@ -84,6 +84,22 @@ Movie data rendered
         - A preview link of the song from Spotify
         - The album that the song is from
 
+Step 1: npm install node-spotify-api
+
+![1. npm i node-spotify-api](images/npm-spotify-api.png)
+
+Node Spotify-API successfully installed!
+
+![spotify successfully installed](images/spotify-installed.png)
+
+Step 2: Enter spotify-this-song command as listed above + the song track
+
+![2. Enter spotify-this-song command](images/spotify-command.png)
+
+Song data rendered
+
+![Song data rendered](images/song-results.png)
+
 4. `node liri.js do-what-it-says`
     * Using the fs Node package, Liri will take the text inside of random.txt and then use it to call one of Liri's commands.
 
