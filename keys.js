@@ -15,7 +15,7 @@ var keys = require("./keys.js");
 var askLiri = function () {
   // divider will be used as a spacer between the data we print in log.txt
   var divider = "\n------------------------------------------------------------\n\n";
-  
+
   // findMovie takes in the name of a movie and searches the OMDB API
   this.findMovie = function (movie) {
     if (!movie) {
@@ -93,12 +93,13 @@ var askLiri = function () {
         //   Append songData and the divider to log.txt, print songData to the console
         fs.appendFile("log.txt", songData + divider, function (err) {
           if (err) throw err;
-             console.log("\n----- log.txt was updated with Song info! -----\n")
+          console.log("\n----- log.txt was updated with Song info! -----\n")
           console.log(songData);
         });
       };
     });
   };
-
 };
-  module.exports = askLiri; //module.exports with askLiri function as an object with data/variables to access in liri.js file using the 'require' keyword.
+
+//module.exports with askLiri function as an object with data/variables to access in liri.js file using the 'require' keyword.
+module.exports = askLiri;

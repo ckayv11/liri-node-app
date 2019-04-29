@@ -102,8 +102,23 @@ Song data rendered
 
 4. `node liri.js do-what-it-says`
     * Using the fs Node package, Liri will take the text inside of random.txt and then use it to call one of Liri's commands.
+    * Be sure all the node packages are installed (if installed already, won't have to do it again)
 
-The data is also logged to a log.txt file.
+Enter do-what-it-says command & enter; data from random-txt will render
+
+![random-txt image](images/random-text-song.png)
+
+Song data rendered
+
+![spotify-this-song data rendered](images/dowhatitsays-spotify.png)
+
+Editing the text in random.txt and calling the corresponding function will display a new result. In this case, I tested out movie-this
+
+![random-txt image](images/random-text-movie.png)
+
+![movie-this data rendered](images/dowhatitsays-movie.png)
+
+Lastly, all the data is also logged to a log.txt file.
 
 ![log.txt image](images/log-txt-screen.png)
 
